@@ -1728,7 +1728,12 @@ pre .javascript .function {
   max-width: 96px;
   height: auto;
   border: 2px solid #333;
+  border-radius: 50%;
+  transition: 2s all;
   opacity: 1;
+}
+.site-author-image:hover {
+  transform: rotate(360deg);
 }
 .site-author-name {
   margin: 5px 0 0;
@@ -1763,7 +1768,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffd4f2;
+  background: #c74461;
 }
 .feed-link,
 .chat {
@@ -2120,6 +2125,10 @@ pre .javascript .function {
   top: 50%;
   transform: translate(-50%, -50%);
   color: #ccc;
+}
+.has-jax {
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .page-archive .archive-page-counter {
   position: relative;

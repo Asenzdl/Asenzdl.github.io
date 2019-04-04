@@ -96,17 +96,18 @@
 
 
 
-  <meta name="description" content="高斯分布的指数族分布形式未知均值，已知方差对于$y \sim N(\mu, \sigma^2)$ \displaystyle \begin{aligned}      f(y;\mu,\sigma^2)       &amp;= \dfrac{1}{\sqrt{2\pi}\sigma} exp(-\frac{(y-\mu)^2}{2\sigma^2})  \\     &amp;= \dfrac{1}{\sqrt">
+  <meta name="description" content="线性可分SVM间隔函数间隔几何间隔">
+<meta name="keywords" content="导航,分享">
 <meta property="og:type" content="article">
-<meta property="og:title" content="赵大力">
-<meta property="og:url" content="http://yoursite.com/2019/04/04/赵大力/index.html">
+<meta property="og:title" content="SVM">
+<meta property="og:url" content="http://yoursite.com/2019/04/04/SVM/index.html">
 <meta property="og:site_name" content="阿森">
-<meta property="og:description" content="高斯分布的指数族分布形式未知均值，已知方差对于$y \sim N(\mu, \sigma^2)$ \displaystyle \begin{aligned}      f(y;\mu,\sigma^2)       &amp;= \dfrac{1}{\sqrt{2\pi}\sigma} exp(-\frac{(y-\mu)^2}{2\sigma^2})  \\     &amp;= \dfrac{1}{\sqrt">
+<meta property="og:description" content="线性可分SVM间隔函数间隔几何间隔">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-04T12:56:24.755Z">
+<meta property="og:updated_time" content="2019-04-04T10:53:57.819Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="赵大力">
-<meta name="twitter:description" content="高斯分布的指数族分布形式未知均值，已知方差对于$y \sim N(\mu, \sigma^2)$ \displaystyle \begin{aligned}      f(y;\mu,\sigma^2)       &amp;= \dfrac{1}{\sqrt{2\pi}\sigma} exp(-\frac{(y-\mu)^2}{2\sigma^2})  \\     &amp;= \dfrac{1}{\sqrt">
+<meta name="twitter:title" content="SVM">
+<meta name="twitter:description" content="线性可分SVM间隔函数间隔几何间隔">
 
 
 
@@ -114,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/04/04/赵大力/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/04/SVM/">
 
 
 
@@ -124,7 +125,7 @@
   };
 </script>
 
-  <title>赵大力 | 阿森</title>
+  <title>SVM | 阿森</title>
   
 
 
@@ -323,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/04/赵大力/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/04/SVM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="三木">
@@ -340,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">赵大力
+          <h1 class="post-title" itemprop="name headline">SVM
 
               
             
@@ -366,7 +367,7 @@
                 
               
 
-              <time title="创建时间：2019-04-04 14:22:51 / 修改时间：20:56:24" itemprop="dateCreated datePublished" datetime="2019-04-04T14:22:51+08:00">2019-04-04</time>
+              <time title="创建时间：2019-04-04 18:48:24 / 修改时间：18:53:57" itemprop="dateCreated datePublished" datetime="2019-04-04T18:48:24+08:00">2019-04-04</time>
             
 
             
@@ -376,6 +377,24 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -399,7 +418,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.8k</span>
+                <span title="本文字数">20</span>
               
 
               
@@ -413,7 +432,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -433,31 +452,7 @@
       
 
       
-        <h3 id="高斯分布的指数族分布形式"><a href="#高斯分布的指数族分布形式" class="headerlink" title="高斯分布的指数族分布形式"></a>高斯分布的指数族分布形式</h3><h4 id="未知均值，已知方差"><a href="#未知均值，已知方差" class="headerlink" title="未知均值，已知方差"></a>未知均值，已知方差</h4><p>对于$y \sim N(\mu, \sigma^2)$</p>
-<script type="math/tex; mode=display">\displaystyle \begin{aligned} 
-    f(y;\mu,\sigma^2)  
-    &= \dfrac{1}{\sqrt{2\pi}\sigma} exp(-\frac{(y-\mu)^2}{2\sigma^2})  \\
-    &= \dfrac{1}{\sqrt{2\pi}\sigma} exp(-\dfrac{y^2}{2\sigma^2} + \dfrac{\mu}{\sigma^2}y - \dfrac{\mu^2}{2\sigma^2}) \\
-    &= \dfrac{1}{\sqrt{2\pi}\sigma} exp(-\dfrac{y^2}{2\sigma^2}) exp (\dfrac{\mu}{\sigma^2}y - \dfrac{\mu^2}{2\sigma^2})
-\end{aligned}</script><script type="math/tex; mode=display">\Longrightarrow \begin{cases} 
-    T(y) = \dfrac{y}{\sigma}  \\[2ex]
-    \eta(\mu) = \dfrac{\mu}{\sigma} \\[2ex]
-    A(\mu) = \dfrac{\mu^2}{2\sigma^2} = \dfrac{\eta^2}{2} = A(\eta)\\[2ex]
-    h(x) =  \dfrac{1}{\sqrt{2\pi}\sigma} exp(-\dfrac{y^2}{2\sigma^2})
-\end{cases}</script><p>令$\ \sigma^2=1$，$\ T(y) = y，\eta(\mu) = \mu$，则在GMLs下模型为</p>
-<script type="math/tex; mode=display">\ h_\theta(\mathbf{x}) = E[y|\eta] = A'(\eta) = \eta = \theta^\mathsf{T}\mathbf{x}</script><h4 id="未知均值，未知方差"><a href="#未知均值，未知方差" class="headerlink" title="未知均值，未知方差"></a>未知均值，未知方差</h4><script type="math/tex; mode=display">\displaystyle \begin{aligned} 
-    f(x;\mu,\sigma^2)  
-    &= \dfrac{1}{\sqrt{2\pi}\sigma} exp(-\frac{(x-\mu)^2}{2\sigma^2})  \\
-    &= \dfrac{1}{\sqrt{2\pi}\sigma} exp(-\dfrac{x^2}{2\sigma^2} + \dfrac{\mu}{\sigma^2}x - \dfrac{\mu^2}{2\sigma^2}) \\
-    &= \dfrac{1}{\sqrt{2\pi}} exp\left(\left[\dfrac{\mu}{\sigma^2}\; -\dfrac{x^2}{2\sigma^2}\right] \begin{bmatrix} x  \\ x^2 \end{bmatrix} - (\dfrac{\mu^2}{2\sigma^2} + \log\sigma) \right)
-\end{aligned}</script><script type="math/tex; mode=display">\Longrightarrow \begin{cases} 
-    T(x) = \begin{bmatrix} x  \\ x^2 \end{bmatrix}  \\[2ex]
-    \bm{\eta} = \begin{bmatrix} \dfrac{\mu}{\sigma^2}  \\ -\dfrac{1}{2\sigma^2} \end{bmatrix} = \begin{bmatrix} \eta_1  \\ \eta_2 \end{bmatrix} \Longrightarrow \begin{cases} \mu = -\dfrac{\eta_1}{2\eta_2} \\[2ex] \sigma^2 = -\dfrac{1}{2\eta_2} \\ \end{cases} \\[4ex]
-    A(\bm{\eta}) = \dfrac{\mu^2}{2\sigma^2} + \log\sigma = -\dfrac{\eta_1^2}{4\eta_2} - \dfrac{1}{2} \log(-2\eta_2) \\[3ex]
-    h(x) =  \dfrac{1}{\sqrt{2\pi}}
-\end{cases}</script><blockquote>
-<p>$\eta_2 &lt; 0$</p>
-</blockquote>
+        <h1 id="线性可分SVM"><a href="#线性可分SVM" class="headerlink" title="线性可分SVM"></a>线性可分SVM</h1><h2 id="间隔"><a href="#间隔" class="headerlink" title="间隔"></a>间隔</h2><p>函数间隔<br>几何间隔  </p>
 
       
     </div>
@@ -479,6 +474,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/导航/" rel="tag"># 导航</a>
+          
+            <a href="/tags/分享/" rel="tag"># 分享</a>
+          
+        </div>
+      
 
       
       
@@ -488,15 +491,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/04/04/赵大力/" rel="next" title="赵大力">
+                <i class="fa fa-chevron-left"></i> 赵大力
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/04/SVM/" rel="prev" title="SVM">
-                SVM <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -660,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#高斯分布的指数族分布形式"><span class="nav-number">1.</span> <span class="nav-text">高斯分布的指数族分布形式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#未知均值，已知方差"><span class="nav-number">1.1.</span> <span class="nav-text">未知均值，已知方差</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#未知均值，未知方差"><span class="nav-number">1.2.</span> <span class="nav-text">未知均值，未知方差</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线性可分SVM"><span class="nav-number">1.</span> <span class="nav-text">线性可分SVM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#间隔"><span class="nav-number">1.1.</span> <span class="nav-text">间隔</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -848,46 +851,6 @@
   
   
 
-  
-    
-      <script type="text/x-mathjax-config">
-  
-
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      
-      equationNumbers: {
-        autoNumber: 'AMS'
-      }
-    }
-  });
-  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
-    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
-      if (data.display) {
-        var next = data.script.nextSibling;
-        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
-        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
-      }
-    });
-  });
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for (i = 0; i < all.length; i += 1) {
-      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
-    }
-  });
-</script>
-<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-    
   
 
 
